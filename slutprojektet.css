@@ -1,0 +1,168 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px; /* Ange en radien på 20px för att göra hörnen lite runda */
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #ffd700; /* Gul färg */
+}
+
+/* Main Styles */
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px; /* Ange en radien på 20px för att göra hörnen lite runda */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table, th, td {
+    border: 1px solid #333;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+a:link{
+    color: greenyellow;
+}
+
+a:visited{
+    color: rgb(6, 179, 141)
+}
+
+a:focus{
+    background-color: yellow;
+    transform: scale(1.2);
+}
+
+a:hover{
+    color: blue;
+    transform: scale(1.2);
+}
+
+a:activet{
+    color: hsl(300, 100%, 50%,)
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+}
+
+h1.centerh1 {
+    margin-top: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Tre spalter för bröst, triceps och axlar */
+    grid-gap: 50px; /* Mellanrum mellan kolumnerna */
+}
+
+
+#tvåspalt .container{
+    grid-template-columns: 1fr 1fr; /* Två kolumner med samma bredd */
+}
+
+.category {
+    border: 1px solid #ccc; /* Standard border för kategorirutor */
+    padding: 20px; /* Lite utfyllnad inuti kategorirutorna */
+    border-radius: 20px; /* Ange en radien på 20px för att göra hörnen lite runda */
+}
+
+
+
