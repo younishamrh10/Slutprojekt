@@ -1,83 +1,90 @@
-/* Reset CSS */
+/* Återställ standardmarginaler, fyllningar och box-modell för alla element */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Grundläggande stilar för webbsidans kropp */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-    line-height: 1.6;
+    font-family: Arial, sans-serif; /* Använd Arial eller sans-serif som fallback för typsnitt */
+    background-color: #f2f2f2; /* Bakgrundsfärg */
+    color: #333; /* Textfärg */
+    line-height: 1.6; /* Radhöjd */
 }
 
 .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    max-width: 1200px; /* Stilar för huvudbehållaren med en maximal bredd på 1200px */
+    margin: 0 auto; /* Centrerar behållaren horisontellt */
+    padding: 20px; 
 }
 
-/* Header Styles */
+/* Stilar för sidans header */
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #333;  /* Bakgrundsfärg */
+    color: #fff; /* Textfärg */
     padding: 20px;
-    text-align: center;
-    border-radius: 15px; /* Ange en radien på 20px för att göra hörnen lite runda */
+    text-align: center; /* Centrerad text */
+    border-radius: 15px;  /* Avrundade kanter */
 }
 
+/* Stilar för navigationslänkar i headern */
 header nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
+    display: flex; /* Flexbox-layout för listelementen */
+    justify-content: center; /* Centrerar elementen horisontellt */
+    list-style-type: none; /* Tar bort punktlistornas stil */
 }
 
+/* Stilar för varje navigationslistelement */
 header nav ul li {
-    margin-right: 20px;
+    margin-right: 20px; /* Högermarginal */
 }
 
+/* Stilar för navigationslänkar */
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    color: #fff; /* Textfärg */
+    text-decoration: none; /* Ingen understreckning */
+    font-size: 18px; /* Storlek på typsnitt */
+    transition: color 0.3s ease; /* Jämn övergång av färg */
 }
 
+/* Stilar för hover-effekten på navigationslänkar */
 header nav ul li a:hover {
-    color: #ffd700; /* Gul färg */
+    color: #ffd700; /* Ändra färg vid hover */
 }
 
-/* Main Styles */
+/* Stilar för huvudinnehållet */
 main {
     padding: 20px;
 }
 
+/* Stilar för rubriker */
 h1, h2 {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center; /* Centrerad text */
+    margin-bottom: 20px; /* Nedre marginal */
 }
 
-/* Footer Styles */
+/* Stilar för sidans footer */
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
-    border-radius: 15px; /* Ange en radien på 20px för att göra hörnen lite runda */
+    border-radius: 15px;
 }
 
+/* Stilar för text i footern */
 footer p {
-    margin: 0;
+    margin: 0; /* Tar bort marginaler */
 }
 
-/* Table Styles */
+/* Stilar för tabeller */
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    border-collapse: collapse; /* Sammanfogar tabellramar */
+    margin-bottom: 20px; /* Nedre marginal */
 }
+
 
 table, th, td {
     border: 1px solid #333;
@@ -88,45 +95,49 @@ th, td {
     text-align: left;
 }
 
+/* Stilar för tabellrubrik */
 caption {
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-weight: bold; /* Fetstil */
+    margin-bottom: 10px; /* Nedre marginal */
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
-    header nav ul {
-        flex-direction: column;
-        align-items: center;
+/* Media query för mindre skärmar */
+@media (max-width: 768px) { /* Justeringar för navigationslistan */
+    nav > ul { 
+        flex-direction: column; /* Stacking av listelement */
+        align-items: center; /* Centrerar elementen vertikalt */
     }
 
-    header nav ul li {
-        margin-bottom: 10px;
+     /* Ytterligare justeringar för listelement */
+    ul > li {
+        margin-bottom: 10px; /* Nedre marginal */
     }
 }
 
+/* Stilar för länkar */
 a:link{
-    color: greenyellow;
+    color: greenyellow; /* Standardfärg */
 }
 
 a:visited{
-    color: rgb(6, 179, 141)
+    color: rgb(6, 179, 141)  /* Färg för besökta länkar */
 }
 
 a:focus{
-    background-color: yellow;
-    transform: scale(1.2);
+    background-color: yellow; /* Bakgrundsfärg vid fokus */
+    transform: scale(1.2); /* Förstorningseffekt */
 }
 
 a:hover{
-    color: blue;
-    transform: scale(1.2);
+    color: blue; /* Färg vid hover */
+    transform: scale(1.2); /* Förstorningseffekt */
 }
 
 a:active{
-    color: hsl(300, 100%, 50%)
+    color: hsl(300, 100%, 50%) /* Färg för aktiva länkar */
 }
 
+/* Repetitiva deklarationer för body och wrapper */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -139,45 +150,51 @@ body {
     padding: 20px;
 }
 
+/* Ytterligare stilar för header och rubrik */
 header {
     text-align: center;
 }
 
 h1.centerh1 {
-    margin-top: 0;
+    margin-top: 0; /* Ingen övre marginal */
 }
 
+/* Stilar för behållaren med grid-layout */
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* Tre spalter för bröst, triceps och axlar */
-    grid-gap: 50px; /* Mellanrum mellan kolumnerna */
+    display: grid; /* Använder CSS Grid */
+    grid-template-columns: 1fr 1fr 1fr; /* Tre lika breda kolumner */
+    grid-gap: 50px; /* Avstånd mellan kolumner */
 }
 
-
+/* Modifierad layout för två kolumner */
 #tvåspalt .container{
-    grid-template-columns: 1fr 1fr; /* Två kolumner med samma bredd */
+    grid-template-columns: 1fr 1fr; /* Två lika stora kolumner */
 }
 
+/* Stilar för kategorielement */
 .category {
-    border: 1px solid #ccc; /* Standard border för kategorirutor */
-    padding: 20px; /* Lite utfyllnad inuti kategorirutorna */
-    border-radius: 20px; /* Ange en radien på 20px för att göra hörnen lite runda */
+    border: 1px solid #ccc; /* Ramstil */
+    padding: 20px; /* Fyllnad */
+    border-radius: 20px; /* Runda kanter */
 }
 
+/* Stilar för artikelelement */
 article{
     border: 2px solid black;
     padding: 10px;
-    margin-left: 20%; /*Marginal på vänstra delen 10 stycken bredder på siffran 0*/
-    margin-right: 20%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    border-radius: 1em;
+    margin-left: 20%; /* Vänstermarginal */
+    margin-right: 20%; /* Högermarginal */
+    margin-top: 5%; /* Översta marginal */
+    margin-bottom: 5%; /* Nedre marginal */
+    border-radius: 1em; 
 }
 
+/* Stilar för fältuppsättningar */
 fieldset{
     border-radius: 15px;
 }
 
+/* Stilar för submit-knappar */
 input[type="submit"]{
     width: 100px;
     height: 100px;
@@ -188,3 +205,7 @@ input[type="submit"]{
     margin-right: 25%
 } 
 
+/* Centrera tabeller och figurer */
+table, figure{
+    margin: auto;
+}
