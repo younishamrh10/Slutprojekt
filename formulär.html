@@ -20,18 +20,38 @@
             <h1 class="centerh1">Fotbollsquiz</h1>
         </header>
         <main>
-            <u9>
-            <label for="winner">Vem vann VM 2022?</label>
+            <article>
+            <section>
+                <form action="svar.html" method="post"> <!--Formulär, data skickas till formulärsvar.html. Data syns i urlen-->
+                    <fieldset> <!--Grupperar relaterade fält-->
+                        <legend>Vem är du?</legend> <!--Titel för grupperingen-->
+                        <p>
+                            <label for="namn">Namn:</label> <!--Textetikett för element med ID namn, lättare att navigera för funktionsnedsatta-->
+                            <input type="text" name="namn" id="namn" required placeholder="Förnamn Efternamn"><br> <!--Text. Name används av webbservern. ID används för att länka ihop elementet med label. Required säger att användaren måste fylla i för att skicka. Placeholder förhandsvisar i rutan-->
+                        </p>
+                        <p>
+                            <label for="email">Mejladress:</label> 
+                            <input type="email" name="email" id="email" required><br> <!--Mejlformat--> 
+                        </p>
+                        <p>
+                            <label for="lösenord">Lösenord:</label>
+                            <input type="password" name="lösenord" id="lösenord" required><br> <!--Lösenordsformat, texten syns inte när man fyller i, endast punkter syns.--> 
+                        </p>
+                        <p>
+                            <label for="telefon">Telefon:</label>  
+                            <input type="tel" name="telefon" id="telefon" required placeholder="Endast siffror 0-9, 9 siffror" pattern="[0-9]{9}"><br> <!--Telefonformat. Pattern gör så att endast siffror 0-9 kan användas. Ska vara totalt 9 tecken.--> 
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                    <legend>Fotbollsquiz</legend>
+                        <label for="winner">Vem vann VM 2022?</label>
                 <select id="winner" name="winner">
-                    <option value="argentina">Argentina</option>
                     <option value="brazil">Brasilien</option>
                     <option value="germany">Tyskland</option>
+                    <option value="argentina">Argentina</option>
                     <option value="italy">Italien</option>
-                    <!-- Lägg till fler alternativ efter behov -->
                 </select>
-            </div>
-            <div class="question">
-                <p>Vem vann Ballon d'Or mest?</p>
+                        <p>Vem vann Ballon d'Or mest?</p>
                 <label>
                     <input type="radio" name="ballondor" value="messi"> Messi
                 </label>
@@ -41,18 +61,38 @@
                 <label>
                     <input type="radio" name="ballondor" value="neymar"> Neymar
                 </label>
-                <!-- Lägg till fler alternativ efter behov -->
-            </div>
-            <div class="question">
-                <label for="ronaldo-goals">Hur många mål har Ronaldo gjort?</label>
-                <input type="text" id="ronaldo-goals" name="ronaldo-goals">
-            </div>
-            <div class="question">
-                <label for="rating">Hur mycket ger du denna sidan från 1-10?</label>
+                <p><label for="ronaldo-goals">Hur många mål har Ronaldo gjort?</label>
+                    <input type="text" id="ronaldo-goals" name="ronaldo-goals">
+                </p>
+                <label for="rating">Hur mycket gillar du fotboll 1-10?</label>
                 <input type="range" id="rating" name="rating" min="1" max="10" step="1">
-            </div>
-            <button type="submit">Skicka</button>
-        </u9>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Feedback</legend>
+                        <p>
+                            <label for="rating">Hur mycket ger du denna sidan?</label><br>
+                            <input type="radio" name="rating" id="1" value="1" checked><label for="1">1</label> <!--Värde bestämt. Radio = endast en punkt av följande 5 kan markeras. Checked gör att detta blir förval när sidan laddas--> 
+                            <input type="radio" name="rating" id="2" value="2"><label for="2">2</label>
+                            <input type="radio" name="rating" id="3" value="3"><label for="3">3</label>
+                            <input type="radio" name="rating" id="4" value="4"><label for="4">4</label>
+                            <input type="radio" name="rating" id="5" value="5"><label for="5">5</label>
+                            <input type="radio" name="rating" id="6" value="6"><label for="6">6</label>
+                            <input type="radio" name="rating" id="7" value="7"><label for="7">7</label>
+                            <input type="radio" name="rating" id="8" value="8"><label for="8">8</label>
+                            <input type="radio" name="rating" id="9" value="9"><label for="9">9</label>
+                            <input type="radio" name="rating" id="10" value="10"><label for="10">10</label>
+                        </p>
+                        <p>
+                            <label for="övrigt">Övriga tankar:</label>
+                            <textarea id="övrigt" name="övrigt" placeholder="Skriv ditt meddelande."></textarea> <!--Större textruta--> 
+                        </p>
+                    </fieldset>
+                        <p>
+                            <input value="skicka" type="submit"> <!--Skickaknapp--> 
+                        </p>
+                </form>
+            </section>
+        </article>
         </main>
         <footer>
             <p>Younis Hamrh <br>TE22a</p>

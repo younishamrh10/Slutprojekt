@@ -123,8 +123,8 @@ a:hover{
     transform: scale(1.2);
 }
 
-a:activet{
-    color: hsl(300, 100%, 50%,)
+a:active{
+    color: hsl(300, 100%, 50%)
 }
 
 body {
@@ -164,5 +164,27 @@ h1.centerh1 {
     border-radius: 20px; /* Ange en radien på 20px för att göra hörnen lite runda */
 }
 
+article{
+    border: 2px solid black;
+    padding: 10px;
+    margin-left: 20%; /*Marginal på vänstra delen 10 stycken bredder på siffran 0*/
+    margin-right: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 1em;
+}
 
+fieldset{
+    border-radius: 15px;
+}
+
+input[type="submit"]{
+    width: 100px;
+    height: 100px;
+}
+
+.article1{
+    margin-left: 25%;
+    margin-right: 25%
+} 
 
