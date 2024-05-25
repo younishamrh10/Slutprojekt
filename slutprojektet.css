@@ -13,10 +13,14 @@ body {
     line-height: 1.6; /* Radhöjd */
 }
 
-.wrapper {
-    max-width: 1200px; /* Stilar för huvudbehållaren med en maximal bredd på 1200px */
-    margin: 0 auto; /* Centrerar behållaren horisontellt */
-    padding: 20px; 
+.wrapper{ /*Klass*/
+    display: grid; /*Gridlayout*/
+    grid-template-rows: 100px auto auto auto; 
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
 }
 
 /* Stilar för sidans header */
@@ -92,26 +96,12 @@ table, th, td {
 
 th, td {
     padding: 10px;
-    text-align: left;
 }
 
 /* Stilar för tabellrubrik */
 caption {
     font-weight: bold; /* Fetstil */
     margin-bottom: 10px; /* Nedre marginal */
-}
-
-/* Media query för mindre skärmar */
-@media (max-width: 768px) { /* Justeringar för navigationslistan */
-    nav > ul { 
-        flex-direction: column; /* Stacking av listelement */
-        align-items: center; /* Centrerar elementen vertikalt */
-    }
-
-     /* Ytterligare justeringar för listelement */
-    ul > li {
-        margin-bottom: 10px; /* Nedre marginal */
-    }
 }
 
 /* Stilar för länkar */
