@@ -1,112 +1,99 @@
-/* Återställ standardmarginaler, fyllningar och box-modell för alla element */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Grundläggande stilar för webbsidans kropp */
 body {
     font-family: Arial, sans-serif; /* Använd Arial eller sans-serif som fallback för typsnitt */
-    background-color: #f2f2f2; /* Bakgrundsfärg */
-    color: #333; /* Textfärg */
-    line-height: 1.6; /* Radhöjd */
+    background-color: #f2f2f2; /* vit bakgrundsfärg */
+    color: #333; /* Mörkgrå textfärg */
 }
 
-.wrapper{ /*Klass*/
+.wrapper{ /* Stilar för en wrapper-klass som använder CSS Grid Layout */
     display: grid; /*Gridlayout*/
-    grid-template-rows: 100px auto auto auto; 
+    grid-template-rows: 70px 80px auto 60px; /* Definierar radhöjder för gridområden */
     grid-template-areas: 
-    "header"
-    "nav"
-    "main"
-    "footer";
+    "header" /* Headerområde */
+    "nav" /* Navigationsområde */
+    "main" /* Huvudområde */
+    "footer"; /* Footerområde */
 }
 
-/* Stilar för sidans header */
-header {
-    background-color: #333;  /* Bakgrundsfärg */
-    color: #fff; /* Textfärg */
-    padding: 20px;
-    text-align: center; /* Centrerad text */
-    border-radius: 15px;  /* Avrundade kanter */
+header{ /* Stilar för header-sektionen */
+    grid-area: header; /* Placera headern i det definierade gridområdet 'header' */
+    color: #333; /* Mörkgrå textfärg */ 
 }
 
-/* Stilar för navigationslänkar i headern */
-header nav ul {
-    display: flex; /* Flexbox-layout för listelementen */
-    justify-content: center; /* Centrerar elementen horisontellt */
+nav{ /* Stilar för navigationsområdet */
+    grid-area: nav; /* Placera navigationen i det definierade gridområdet 'nav' */
+    background-color: #333;  /* Mörkgrå bakgrundsfärg */
+    border-radius: 15px;  /* Rundade hörn */
+}
+
+main{ /* Stilar för huvudområdet */
+    grid-area: main; /* Placera huvudområdet i det definierade gridområdet 'main' */
+    display: grid; /* Använd grid-layout */
+    grid-template-columns: 1fr; /* En kolumn som fyller hela bredden */
+}
+
+#tvåspalt main{ /* Anpassning av huvudområdet till två kolumner om 'tvåspalt' ID används */
+    grid-template-columns: 1fr 1fr; /* Två kolumner av samma bredd */
+}
+
+#trespalt main{ /* Anpassning av huvudområdet till tre kolumner om 'trespalt' ID används */
+    grid-template-columns: 1fr 1fr 1fr; /* Tre kolumner av samma bredd */
+}
+
+footer{ /* Stilar för footer-sektionen */
+    grid-area: footer; /* Placera footern i det definierade gridområdet 'footer' */
+}
+
+
+nav ul { /* Stilar för navigationslänkar i navigationsområdet */
+    display: grid; /* Använd grid-layout */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; /* Nio lika breda kolumner för navigationslänkar */
+}
+
+
+ul li { /* Stilar för varje navigationslistelement */
     list-style-type: none; /* Tar bort punktlistornas stil */
 }
 
-/* Stilar för varje navigationslistelement */
-header nav ul li {
-    margin-right: 20px; /* Högermarginal */
+
+h1, h2 { /* Stilar för rubriker */
+    text-align: center;  /* Centrera texten */
+    margin-bottom: 20px; /* Lägg till en nedre marginal på 20px */
 }
 
-/* Stilar för navigationslänkar */
-header nav ul li a {
-    color: #fff; /* Textfärg */
-    text-decoration: none; /* Ingen understreckning */
-    font-size: 18px; /* Storlek på typsnitt */
-    transition: color 0.3s ease; /* Jämn övergång av färg */
+
+footer {   /* Stilar för sidans footer */
+    background-color: #333; /* Mörkgrå bakgrundsfärg */
+    color: #fff; /* Vit textfärg */
+    text-align: center; /* Centrera texten */
+    border-radius: 15px; /* Rundade hörn med 15 px rund hörn */
 }
 
-/* Stilar för hover-effekten på navigationslänkar */
-header nav ul li a:hover {
-    color: #ffd700; /* Ändra färg vid hover */
-}
 
-/* Stilar för huvudinnehållet */
-main {
-    padding: 20px;
-}
-
-/* Stilar för rubriker */
-h1, h2 {
-    text-align: center; /* Centrerad text */
-    margin-bottom: 20px; /* Nedre marginal */
-}
-
-/* Stilar för sidans footer */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    border-radius: 15px;
-}
-
-/* Stilar för text i footern */
-footer p {
-    margin: 0; /* Tar bort marginaler */
-}
-
-/* Stilar för tabeller */
-table {
-    width: 100%;
-    border-collapse: collapse; /* Sammanfogar tabellramar */
-    margin-bottom: 20px; /* Nedre marginal */
+table {/* Stilar för tabeller */
+    width: 100%;  /* Tabellens bredd fyller hela tillgängliga utrymmet */
+    border-collapse: collapse; /* Sammanfoga tabellcellerna för att ta bort mellanrum mellan dem */
+    margin-bottom: 20px; /* Lägg till en nedre marginal på 20px */
 }
 
 
 table, th, td {
-    border: 1px solid #333;
+    border: 1px solid #333; /* Mörkgrå kantlinje för tabellen, tabellhuvuden och celler */
 }
 
 th, td {
-    padding: 10px;
+    padding: 10px; /* Inre marginal för tabellhuvuden och celler */
 }
 
 /* Stilar för tabellrubrik */
 caption {
-    font-weight: bold; /* Fetstil */
-    margin-bottom: 10px; /* Nedre marginal */
+    font-weight: bold; /* Fetstil för rubriktext */
+    margin-bottom: 10px; /* Lägg till en nedre marginal på 10px */
 }
 
-/* Stilar för länkar */
+/* Stilar för länkar i olika tillstånd */
 a:link{
-    color: greenyellow; /* Standardfärg */
+    color: greenyellow; /* Standardfärg för icke-besökta länkar */
 }
 
 a:visited{
@@ -127,75 +114,26 @@ a:active{
     color: hsl(300, 100%, 50%) /* Färg för aktiva länkar */
 }
 
-/* Repetitiva deklarationer för body och wrapper */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+article{ /* Stilar för artikelelement */
+    border: 2px solid black; /* Svart kantlinje med 2px tjocklek */
+    padding: 10px; /* Inre marginal */
+    margin-left: 20%; /* Vänstermarginal på 20% */
+    margin-right: 20%; /* Högermarginal på 20% */
+    margin-top: 5%; /* Översta marginal på 5% */
+    margin-bottom: 5%;  /* Nedre marginal på 5% */
+    border-radius: 1em; /* Rundade hörn med 1em radie */
 }
 
-.wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+
+fieldset{ /* Stilar för fältuppsättningar */
+    border-radius: 15px; /* Rundade hörn med 15px radie */
 }
 
-/* Ytterligare stilar för header och rubrik */
-header {
-    text-align: center;
+input[type="submit"]{ /* Stilar för submit-knappar */
+    width: 100px; /* Bredd på 100px */
+    height: 100px; /* Höjd på 100px */
 }
 
-h1.centerh1 {
-    margin-top: 0; /* Ingen övre marginal */
-}
-
-/* Stilar för behållaren med grid-layout */
-.container {
-    display: grid; /* Använder CSS Grid */
-    grid-template-columns: 1fr 1fr 1fr; /* Tre lika breda kolumner */
-    grid-gap: 50px; /* Avstånd mellan kolumner */
-}
-
-/* Modifierad layout för två kolumner */
-#tvåspalt .container{
-    grid-template-columns: 1fr 1fr; /* Två lika stora kolumner */
-}
-
-/* Stilar för kategorielement */
-.category {
-    border: 1px solid #ccc; /* Ramstil */
-    padding: 20px; /* Fyllnad */
-    border-radius: 20px; /* Runda kanter */
-}
-
-/* Stilar för artikelelement */
-article{
-    border: 2px solid black;
-    padding: 10px;
-    margin-left: 20%; /* Vänstermarginal */
-    margin-right: 20%; /* Högermarginal */
-    margin-top: 5%; /* Översta marginal */
-    margin-bottom: 5%; /* Nedre marginal */
-    border-radius: 1em; 
-}
-
-/* Stilar för fältuppsättningar */
-fieldset{
-    border-radius: 15px;
-}
-
-/* Stilar för submit-knappar */
-input[type="submit"]{
-    width: 100px;
-    height: 100px;
-}
-
-.article1{
-    margin-left: 25%;
-    margin-right: 25%
-} 
-
-/* Centrera tabeller och figurer */
-table, figure{
-    margin: auto;
+table, figure{ /* Centrera tabeller och figurer */
+    margin: auto; /* Centrera med automatisk marginal */
 }
